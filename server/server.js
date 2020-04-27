@@ -12,7 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require('./routes/usuario'));
+
+// Configuracion global rutas
+app.use(require('./routes/index'));
 
 app.get('/', function(req, res) {
     res.json('Hello World')
